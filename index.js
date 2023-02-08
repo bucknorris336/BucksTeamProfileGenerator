@@ -1,6 +1,6 @@
 const Manager = require("./lib/Manager");
-// const Engineer = require("./lib/Engineer");
-// const Intern = require("./lib/Intern");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
@@ -37,7 +37,7 @@ const managerQuestions = [
 
 function appMenu() {
   function createManager() {
-    console.log("Please build your team 👥");
+    console.log("Please build your team");
     inquirer.prompt(managerQuestions).then((answers) => {
       const manager = new Manager(
         answers.managerName,
@@ -49,6 +49,7 @@ function appMenu() {
       createTeam();
     });
   }
+  // main menu function to chose if we want engineer or interl or generate html
   function createTeam() {
     inquirer
       .prompt([
