@@ -46,6 +46,7 @@ function appMenu() {
         answers.managerOfficeNumber
       );
       teamMembers.push(manager);
+      console.log("teamMembers", teamMembers);
       createTeam();
     });
   }
@@ -79,9 +80,37 @@ function appMenu() {
   }
 
   //create function addengineer and call inquirer and pass questions then create new engineer templeate, and push new engineer object to the team members array
-  function addEngineer() {}
+  function addEngineer() {
+  // function createManager() {
+  //   console.log("Please build your team");
+  //   inquirer.prompt(managerQuestions).then((answers) => {
+  //     const manager = new Manager(
+  //       answers.managerName,
+  //       answers.managerId,
+  //       answers.managerEmail,
+  //       answers.managerOfficeNumber
+  //     );
+  //     teamMembers.push(manager);
+  //     console.log("teamMembers", teamMembers);
+  //     createTeam();
+  //   });
+  // }
 
-  function addIntern() {}
+  function addIntern() {
+  // function createManager() {
+  //   console.log("Please build your team");
+  //   inquirer.prompt(managerQuestions).then((answers) => {
+  //     const manager = new Manager(
+  //       answers.managerName,
+  //       answers.managerId,
+  //       answers.managerEmail,
+  //       answers.managerOfficeNumber
+  //     );
+  //     teamMembers.push(manager);
+  //     console.log("teamMembers", teamMembers);
+  //     createTeam();
+  //   });
+  }
 
   function buildTeam() {
     // Create the output directory if the dist path doesn't exist
