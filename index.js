@@ -34,6 +34,51 @@ const managerQuestions = [
     message: "What is the team manager's office number?",
   },
 ];
+const engineerQuestions = [
+  {
+    type: "input",
+    name: "engineerName",
+    message: "What is your engineer's name?",
+  },
+  {
+    type: "input",
+    name: "engineerId",
+    message: "What is your engineer's id?",
+  },
+  {
+    type: "input",
+    name: "engineerEmail",
+    message: "What is your engineer's email?",
+  },
+  {
+    type: "input",
+    name: "engineerGithub",
+    message: "What is your engineer's GitHub username?",
+  },
+];
+
+const internQuestions = [
+  {
+    type: "input",
+    name: "internName",
+    message: "What is your intern's name?",
+  },
+  {
+    type: "input",
+    name: "internId",
+    message: "What is your intern's id?",
+  },
+  {
+    type: "input",
+    name: "internEmail",
+    message: "What is your intern's email?",
+  },
+  {
+    type: "input",
+    name: "internSchool",
+    message: "What is your intern's school?",
+  },
+];
 
 function appMenu() {
   function createManager() {
@@ -81,35 +126,36 @@ function appMenu() {
 
   //create function addengineer and call inquirer and pass questions then create new engineer templeate, and push new engineer object to the team members array
   function addEngineer() {
-   function createEngineer() {
+    // function createEngineer() {
     console.log("Please build your team");
-    inquirer.prompt(managerQuestions).then((answers) => {
-      const manager = new Manager(
+    inquirer.prompt(engineerQuestions).then((answers) => {
+      console.log("answer", answers);
+      const engineer = new Engineer(
         answers.engineerName,
         answers.engineerId,
         answers.engineerEmail,
-        answers.engineerGithub,
+        answers.engineerGithub
       );
       teamMembers.push(engineer);
       console.log("teamMembers", teamMembers);
       createTeam();
     });
-  } 
+  }
 
   function addIntern() {
-  function createIntern() {
+    // function createIntern() {
     console.log("Please build your team");
-    inquirer.prompt(InternQuestions).then((answers) => {
-      const manager = new Manager(
-        answers.InternName,
-        answers.InternId,
-        answers.InternSchool
+    inquirer.prompt(internQuestions).then((answers) => {
+      const intern = new Intern(
+        answers.internName,
+        answers.internId,
+        answers.internSchool
       );
-      teamMembers.push(Intern);
+      teamMembers.push(intern);
       console.log("teamMembers", teamMembers);
-      createIntern();
+      createTeam();
     });
-      }
+  }
 
   function buildTeam() {
     // Create the output directory if the dist path doesn't exist
