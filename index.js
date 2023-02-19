@@ -162,6 +162,7 @@ function appMenu() {
       const intern = new Intern(
         answers.internName,
         answers.internId,
+        answers.internEmail,
         answers.internSchool
       );
       teamMembers.push(intern);
