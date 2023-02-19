@@ -1,7 +1,7 @@
 # Buck's TeamProfileGenerator
 
 Check out a short video walkthrough
-📽️ Click Here
+📽️ [Click Here](https://drive.google.com/file/d/1IQDf61NYSQhcIKjpcJf6W3bhC1dFLVeb/view?usp=sharing)
 
 ---
 
