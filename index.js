@@ -11,75 +11,88 @@ const distPath = path.join(DIST_DIR, "team.html");
 const render = require("./src/page-template.js");
 
 const teamMembers = [];
-
+// manager questions
 const managerQuestions = [
   {
     type: "input",
     name: "managerName",
     message: "What is the team manager's name?",
+    default: "Herbie",
   },
   {
     type: "input",
     name: "managerId",
     message: "What is the team manager's id?",
+    default: "01",
   },
   {
     type: "input",
     name: "managerEmail",
     message: "What is the team manager's email?",
+    default: "herbie01@gmail.com",
   },
   {
     type: "input",
     name: "managerOfficeNumber",
     message: "What is the team manager's office number?",
+    default: "336",
   },
 ];
+// engineer questions
 const engineerQuestions = [
   {
     type: "input",
     name: "engineerName",
     message: "What is your engineer's name?",
+    default: "Lily",
   },
   {
     type: "input",
     name: "engineerId",
     message: "What is your engineer's id?",
+    default: "02",
   },
   {
     type: "input",
     name: "engineerEmail",
     message: "What is your engineer's email?",
+    default: "lily22@gmail.com",
   },
   {
     type: "input",
     name: "engineerGithub",
     message: "What is your engineer's GitHub username?",
+    default: "swimstar22",
   },
 ];
-
+// intern questions
 const internQuestions = [
   {
     type: "input",
     name: "internName",
     message: "What is your intern's name?",
+    default: "Jeff",
   },
   {
     type: "input",
     name: "internId",
     message: "What is your intern's id?",
+    default: "420",
   },
   {
     type: "input",
     name: "internEmail",
     message: "What is your intern's email?",
+    default: "jeffy420@gmail.com",
   },
   {
     type: "input",
     name: "internSchool",
     message: "What is your intern's school?",
+    default: "UNCW",
   },
 ];
-
+// function
 function appMenu() {
   function createManager() {
     console.log("Please build your team");
@@ -95,7 +108,7 @@ function appMenu() {
       createTeam();
     });
   }
-  // main menu function to chose if we want engineer or interl or generate html
+  // main menu function to chose if we want engineer or intern or generate html
   function createTeam() {
     inquirer
       .prompt([
@@ -143,7 +156,7 @@ function appMenu() {
   }
 
   function addIntern() {
-    // function createIntern() {
+    // create intern function
     console.log("Please build your team");
     inquirer.prompt(internQuestions).then((answers) => {
       const intern = new Intern(
@@ -156,7 +169,7 @@ function appMenu() {
       createTeam();
     });
   }
-
+  // build team function
   function buildTeam() {
     // Create the output directory if the dist path doesn't exist
     if (!fs.existsSync(DIST_DIR)) {
