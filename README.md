@@ -10,6 +10,7 @@ Check out a short video walkthrough
 - [Description](#Description)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Tests](#Tests)
 - [Contributing](#Contributing)
 
 ---
